@@ -1,0 +1,16 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "description": "First transaction",
+            "amount": 100,
+            "date": "2025-02-28"
+        },
+        {
+            "id": 2,
+            "description": "Second transaction",
+            "amount": 50,
+            "date": "2025-02-27"
+        }
+    ]
+}

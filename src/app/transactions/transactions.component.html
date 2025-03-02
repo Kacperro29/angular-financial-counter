@@ -1,0 +1,27 @@
+<div class="transactions">
+  <h1>Transactions</h1>
+  <form [formGroup]="transactionForm" (ngSubmit)="addTransaction()">
+    <input formControlName="amount" placeholder="Amount" />
+    <input formControlName="description" placeholder="Description" />
+    <select formControlName="category">
+      <option value="food">Food</option>
+      <option value="transport">Transport</option>
+      <option value="entertainment">Entertainment</option>
+    </select>
+    <select formControlName="type">
+      <option value="income">Income</option>
+      <option value="expense">Expense</option>
+    </select>
+    <button type="submit">Add Transaction</button>
+  </form>
+
+  <div class="transaction-list">
+    <h2>Transaction List</h2>
+    <div *ngFor="let transaction of transactions">
+      <div>
+        {{ transaction.amount }} USD - {{ transaction.description }} -
+        {{ transaction.category }} - {{ transaction.type }}
+      </div>
+    </div>
+  </div>
+</div>
